@@ -55,8 +55,7 @@ public class ArrayIntQueue implements IntQueue {
         return size == 0;
     }
 
-    // ⚠️ Хэрвээ IntQueue интерфэйс дээр clear() байхгүй бол @Override-ийг аваарай.
-    // IntQueue дээр clear() байгаа бол @Override хэвээр байж болно.
+   
     public void clear() {
         for (int i = 0; i < size; i++) {
             elements[(head + i) % elements.length] = null;
